@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class App {
     public App() {
         System.out.println("\n\n" + convBase2(17) + "\n\n");
@@ -56,6 +58,14 @@ public class App {
         if(n<0) throw new IllegalArgumentException();
         if(n==0){return "";}
         return convBase2(n/2) + String.valueOf(n%2);
+    }
+
+    public int somatorioArrayList(ArrayList<Integer> a){
+        return somatorioArrayListRec(a,a.size() - 1);
+    }
+    public int somatorioArrayListRec(ArrayList<Integer> a, int n){
+        if(n == 0) return a.get(0);
+        return a.get(n) + somatorioArrayListRec(a, n-1);
     }
 
 }
