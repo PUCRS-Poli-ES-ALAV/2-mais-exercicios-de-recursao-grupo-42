@@ -55,17 +55,36 @@ public class App {
     }
 
     public String convBase2(int n) {
-        if(n<0) throw new IllegalArgumentException();
-        if(n==0){return "";}
-        return convBase2(n/2) + String.valueOf(n%2);
+        if (n < 0)
+            throw new IllegalArgumentException();
+        if (n == 0) {
+            return "";
+        }
+        return convBase2(n / 2) + String.valueOf(n % 2);
     }
 
-    public int somatorioArrayList(ArrayList<Integer> a){
-        return somatorioArrayListRec(a,a.size() - 1);
+    public int somatorioArrayList(ArrayList<Integer> a) {
+        return somatorioArrayListRec(a, a.size() - 1);
     }
-    public int somatorioArrayListRec(ArrayList<Integer> a, int n){
-        if(n == 0) return a.get(0);
-        return a.get(n) + somatorioArrayListRec(a, n-1);
+
+    public int somatorioArrayListRec(ArrayList<Integer> a, int n) {
+        if (n == 0)
+            return a.get(0);
+        return a.get(n) + somatorioArrayListRec(a, n - 1);
+    }
+
+    public int findBiggest(ArrayList<Integer> ar){
+        return findBiggestRec(ar, 0, 0);
+    }
+
+    public int findBiggestRec(ArrayList<Integer> ar, int i, int m) {
+        if (i >= ar.size()) {
+            return m;
+        }
+        if (ar.get(i) > m) {
+            return findBiggestRec(ar, i + 1, ar.get(i));
+        }
+        return findBiggestRec(ar, i + 1, m);
     }
 
 }
