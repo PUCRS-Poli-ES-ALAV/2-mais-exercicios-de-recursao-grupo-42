@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class App {
-    public App() {
+public class Recursao {
+    public Recursao() {
         System.out.println(findSubStr("abc","aabc"));
     }
 
@@ -88,15 +88,15 @@ public class App {
     }
 
     public boolean findSubStr(String str, String match){
-
+        return false;
     }
 
     public int nroDigit(int n){
-        
+        return -1;
     }
 
     public ArrayList<String> permutations(String s){
-        
+        return null;
     }
 
 }
