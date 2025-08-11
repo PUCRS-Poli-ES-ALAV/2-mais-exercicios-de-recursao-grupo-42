@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class App {
     public App() {
-        System.out.println("\n\n" + convBase2(17) + "\n\n");
+        System.out.println(findSubStr("abc","aabc"));
     }
 
     public int fatorial(int n) {
@@ -85,6 +85,18 @@ public class App {
             return findBiggestRec(ar, i + 1, ar.get(i));
         }
         return findBiggestRec(ar, i + 1, m);
+    }
+
+    public boolean findSubStr(String str, String match){
+
+    }
+
+    public int nroDigit(int n){
+        
+    }
+
+    public ArrayList<String> permutations(String s){
+        
     }
 
 }
